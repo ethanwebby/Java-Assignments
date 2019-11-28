@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class HW1EthanWebster {
+    public static void main(String[] args) {
+    System.out.println();
+    System.out.println("*****2.5 Financial Application*****"); 
+    
+    //Get subtotal
+    System.out.print("Enter the subtotal: ");         
+    double subtotal = input.nextDouble(); 
+    
+    //Get gratuity
+    System.out.print("Enter the gratuity in whole number format: ");         
+    double gratuityRate = input.nextDouble();
+    
+    //Calculate gratuity total and total bill
+    double gratuityTotal = subtotal * (gratuityRate/100);   
+    double total = subtotal + gratuityTotal;   
+    
+    //Print results
+    System.out.println("The gratuity is $" + gratuityTotal + " and the total"
+            + " is $" + total); 
+    }
+}
