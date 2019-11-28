@@ -1,0 +1,22 @@
+package hw1ethanwebster;
+import java.util.Scanner;
+public class HW1EthanWebster {
+    public static void main(String[] args) {
+    System.out.println();
+    System.out.println("*****2.6 Sum Digits in Integer*****");
+    
+    //Get number from user
+    System.out.print("Enter a whole number between 0 and 1000: ");
+    int number = input.nextInt();
+    
+    //Parsing numbers from input
+    int valueOne = number % 10;
+    int valueTwo = (number / 10) % 10;
+    int valueThree = (number/100) % 10;
+    
+    //Total all parsed number and print results
+    int sumOfInt = valueOne + valueTwo + valueThree;  
+    System.out.println("The sum of the digits is " + sumOfInt); 
+    
+    }
+}
