@@ -1,0 +1,35 @@
+package hw2ethanwebster;
+import java.util.Scanner;
+import java.util.Random;
+
+public class HW2EthanWebster {
+    public static void main(String[] args) {
+        
+        //Scanner object for all homework problems
+        Scanner input = new Scanner(System.in);
+        Random rand = new Random();
+        
+        //Problem 3.2 Add Three Numbers
+        System.out.println("*****3.2 Add Three Numbers*****");
+        
+        //Generate three random numbers
+        int numOne = rand.nextInt(10) + 1;
+        int numTwo = rand.nextInt(10) + 1;
+        int numThree = rand.nextInt(10) + 1;
+        
+        //Prompt for answer
+        System.out.println("What is the sum of the numbers: " + numOne +
+                " " + numTwo + " " + numThree + " ?: ");
+        int answer = input.nextInt();
+        
+        //Check if correct
+        int solution = numOne + numTwo + numThree;
+        if (answer == solution)
+            System.out.println("You are correct");
+        else {
+            System.out.println("You are not correct...");
+            System.out.println(numOne + "+" + numTwo + "+" + numThree + "=" + solution);
+        }
+        
+    }
+}
