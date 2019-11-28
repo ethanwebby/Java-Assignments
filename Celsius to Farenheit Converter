@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class HW1EthanWebster {
+    public static void main(String[] args) {
+    //Scanner instance to allow for input on all homeworks
+    Scanner input = new Scanner (System.in);    
+    
+    //2.1 Convert C to F
+    System.out.println("*****2.1 Convert Celsius to Farenheit*****");
+    System.out.print("Enter a degree in Celsius: "); 
+    
+    //Get input and convert to farenheit
+    double celsius = input.nextDouble();             
+    double farenheit = (9.0 / 5) * celsius + 32;     
+    
+    //Print results
+    System.out.println(celsius + " Celsius is " + farenheit + " Farenheit");
+                                                     
+    }
+}
