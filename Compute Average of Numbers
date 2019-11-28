@@ -1,0 +1,56 @@
+package hw2ethanwebster;
+import java.util.Scanner;
+import java.util.Random;
+
+public class HW2EthanWebster {
+    public static void main(String[] args) {
+        
+        //Scanner object for all homework problems
+        Scanner input = new Scanner(System.in);
+        Random rand = new Random();
+        
+        System.out.println("*****5.1 Compute Average*****");
+        
+        //Initiate variables
+        int numPositive = 0;
+        int numNegative = 0;
+        int count = 0;
+        int sum = 0;
+        int placeHolder = 0;     //Need this for local variable 'num' used in 
+                                 //do while loop
+        boolean isZero = false;
+        
+        System.out.print("Enter a series of integers ending with a 0: ");
+        do { 
+            //Get integer, add to sum, increase count by one to compute average
+            int number = input.nextInt();
+            placeHolder = number;
+            sum += number;
+            count++;
+            
+            //Determine if positive, negative, or a zero
+            if (number > 0)
+                numPositive++;
+            else if (number < 0)
+                numNegative++;
+            else
+                isZero = true;
+            
+        } while (!isZero);
+        
+        //Compute average
+        float average = (float) sum / (count - 1); //Minus one for the zero
+        
+        //Output based on input from user
+        if (placeHolder == 0 && count == 1)
+            System.out.println("No numbers are entered except 0");
+        else {
+            System.out.println("Number of positives: " + numPositive);
+            System.out.println("Number of negatives: " + numNegative);
+            System.out.println("The total is: " + sum);
+            System.out.println("The average is: " + average);
+        }
+
+        
+    }
+}
