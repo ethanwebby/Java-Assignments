@@ -1,0 +1,37 @@
+package hw2ethanwebster;
+import java.util.Scanner;
+import java.util.Random;
+
+public class HW2EthanWebster {
+    public static void main(String[] args) {
+        
+        //Scanner object for all homework problems
+        Scanner input = new Scanner(System.in);
+        Random rand = new Random();
+        
+         //Problem 5.7 Financial Application
+        System.out.println();
+        System.out.println("*****5.7 Financial Application*****");
+        double tuition = 10000;
+        double increase = 0.05;
+        double sumAfterFour = 0;
+        double tuitionAfterTen = 0;
+        
+        for (int i = 1; i < 11; i++) {
+            tuition += (tuition * increase);
+        }
+        
+        tuitionAfterTen = tuition;
+        System.out.println("Tuition after 10 years is: " + tuition);
+        
+        for (int i = 1; i < 5; i++){
+            tuition += (tuition * increase);
+        }
+        
+        sumAfterFour = tuition - tuitionAfterTen;
+        
+        System.out.println("Four years worth of tuition after tenth year: " + 
+                sumAfterFour);
+
+    }
+}
