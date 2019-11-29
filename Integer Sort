@@ -1,0 +1,51 @@
+package hw3ethanwebster;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class HW3EthanWebster {
+    public static void main(String[] args) {
+        //Scanner for all homeworks
+        Scanner input = new Scanner(System.in);
+        
+        //Random generator for all homeworks
+        Random rand = new Random();
+        
+        //Problem 3.8 Sort Integers
+        System.out.println();
+        System.out.println("*****Problem 3.8 Sort Integers*****");
+        
+        //Prompt for numbers
+        System.out.print("Enter integer #1: ");
+        int numOne = input.nextInt();
+        System.out.print("Enter integer #2: ");
+        int numTwo = input.nextInt();
+        System.out.print("Enter integer #3: ");
+        int numThree = input.nextInt();
+        
+        //Sort in non-decreasing order
+        int temp = 0;
+        if (numOne > numTwo) {
+            temp = numOne;
+            numOne = numTwo;
+            numTwo = temp;
+        }
+        
+        if (numTwo > numThree) {
+            temp = numTwo;
+            numTwo = numThree;
+            numThree = temp;
+        }
+        
+        if (numOne > numTwo) {
+            temp = numOne;
+            numOne = numTwo;
+            numTwo = temp;
+        }
+        
+        System.out.print("Numbers in ascending order: ");
+        System.out.print(numOne + ", ");
+        System.out.print(numTwo + ", ");
+        System.out.println(numThree);
+    }
+}
