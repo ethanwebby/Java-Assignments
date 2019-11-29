@@ -1,0 +1,31 @@
+ackage hw3ethanwebster;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class HW3EthanWebster {
+    public static void main(String[] args) {
+        //Scanner for all homeworks
+        Scanner input = new Scanner(System.in);
+        
+        //Random generator for all homeworks
+        Random rand = new Random();
+        
+        //Problem 2.2 Compute Volume of Cylinder
+        System.out.println("*****Problem 2.2 Compute Volume of Cyclinder*****");
+        
+        //Prompt and get radius
+        System.out.print("Enter the radius of a cylinder: ");
+        double radius = input.nextDouble();
+        
+        //Prompt and get length
+        System.out.print("Enter the length of a cylinder: ");
+        double length = input.nextDouble();
+        
+        //Compute area and volume
+        double area = radius * radius * Math.PI;
+        double volume = area * length;
+        System.out.println("The area is " + area);
+        System.out.println("The volume is " + volume);
+    }
+}
