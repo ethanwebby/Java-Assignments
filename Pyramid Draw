@@ -1,0 +1,38 @@
+package hw3ethanwebster;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class HW3EthanWebster {
+    public static void main(String[] args) {
+        //Scanner for all homeworks
+        Scanner input = new Scanner(System.in);
+        
+        //Random generator for all homeworks
+        Random rand = new Random();
+        
+        //Problem 5.17 Display Pyramid
+        System.out.println();
+        System.out.println("*****Problem 5.17 Display Pyramid");
+        
+        System.out.print("Enter the number of lines for the pyramid: ");
+        int numLines = input.nextInt();
+        System.out.println();
+        
+        //Drawing two mirrored pyramids to create pyramid shape
+        for (int i = 1; i <= numLines; i++) {
+            //Create spaces in each row
+            for (int j = 1; j <= numLines - i; j++) {
+                System.out.printf("%4s", " ");  
+            }
+            //Create descending numbers in each row
+            for (int k = i; k >= 1; k--) {              
+                System.out.printf("%4d", k);    
+            }
+            //Create ascending numbers in each row
+            for (int l = 2; l <= i; l++) {
+                System.out.printf("%4d", l);    
+            }
+            System.out.println();
+    }
+}
