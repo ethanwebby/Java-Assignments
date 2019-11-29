@@ -1,0 +1,31 @@
+package hw3ethanwebster;
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class HW3EthanWebster {
+    public static void main(String[] args) {
+        //Scanner for all homeworks
+        Scanner input = new Scanner(System.in);
+        
+        //Random generator for all homeworks
+        Random rand = new Random();
+        
+        //Problem 2.23 Cost of Driving
+        System.out.println();
+        System.out.println("*****Problem 2.23 Cost of Driving*****");
+        
+        //Prompts and assignments to variables
+        System.out.print("Enter the driving distance: ");
+        float distance = input.nextFloat();
+        System.out.print("Enter miles per gallon: ");
+        float mpg = input.nextFloat();
+        System.out.print("Enter price per gallon: ");
+        float priceGallon = input.nextFloat();
+        
+        //Calculate cost of driving
+        float costToDrive = (distance / mpg) * priceGallon;
+        System.out.println("The cost of driving is $" + costToDrive);
+        
+    }
+}
